@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTools (Hex Color Viewer)</title>
+    <style>
+      body {
+        background-color: #1B1B1B;
+        color: white;
+      }
+      * {
+        font-family: Arial;
+      }
+      button {
+        border: none;
+        background-color: #707070;
+        color: white;
+        width: 200px;
+        height: 50px;
+        font-size: 45px;
+      }
+      button:active {
+        background-color: #606060;
+      }
+      input {
+        background-color: #707070;
+        color: white;
+        font-family: Monospace;
+        width: 150px;
+        height: 40px;
+        border: none;
+      }
+      #Preview {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hex Color Viewer</h1>
+    <input type="text" id="Hex" value=#000000>
+    <br>
+    <br>
+    <br>
+    <button id="View">View</button>
+    <hr>
+    <h2>Preview</h2>
+    <section id="Preview"></section>
+    <script>
+      const prev = document.getElementById("Preview");
+      const hex = document.getElementById("Hex");
+      const view = document.getElementById("View");
+
+      view.addEventListener("click", () => {
+        prev.style.backgroundColor = hex.value;
+      });
+    </script>
+  </body>
+</html>
