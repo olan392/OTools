@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTools (Calculator)</title>
+    <style>
+      body {
+        background-color: #1B1B1B;
+        color: white;
+      }
+      * {
+        font-family: Arial;
+      }
+      button {
+        border: none;
+        background-color: #707070;
+        color: white;
+        width: 200px;
+        height: 50px;
+        font-size: 30px;
+      }
+      button:active {
+        background-color: #606060;
+      }
+      input {
+        width: 150px;
+        height: 45px;
+        font-family: Monospace;
+        background-color: #707070;
+        color: white;
+        border: none;
+      }
+      p {
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <hr>
+    <input type="text" value="1+1" id="expr">
+    <br><br><br>
+    <button id="calculate">Calculate</button>
+    <hr>
+    <h2>Output</h2>
+    <p id="output">2</p>
+    <script>
+      const output = document.getElementById("output");
+      const calc = document.getElementById("calculate");
+      const expr = document.getElementById("expr");
+
+      calc.addEventListener("click", () => {
+        output.textContent = eval(expr.value);
+      });
+    </script>
+  </body>
+</html>
